@@ -381,6 +381,7 @@
     <string name="action_next_song">Nächster Song</string>
     <string name="action_previous_song">Vorheriger Song</string>
     <string name="action_pause">Pause</string>
+	<string name="action_edit">Bearbeiten</string>
     <string name="option_cover_art_action">Cover Interaktionsverhalten</string>
     <string name="option_cover_art_action_disabled">Ausgeschalten</string>
     <string name="option_cover_art_action_show_lyrics">Liedtext anzeigen</string>
