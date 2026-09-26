@@ -321,7 +321,8 @@ private fun entryProvider(
 			ImageViewScreen(
 				coverArtId = key.coverArtId,
 				title = key.title,
-				sharedTransitionKey = key.sharedTransitionKey
+				sharedTransitionKey = key.sharedTransitionKey,
+				usage = key.usage
 			)
 		}
 		entry<Screen.Chat> {

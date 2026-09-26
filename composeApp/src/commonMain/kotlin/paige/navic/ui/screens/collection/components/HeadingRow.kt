@@ -65,7 +65,8 @@ fun CollectionDetailScreenHeadingRow(
 					backStack.add(Screen.ImageView(
 						coverArtId = coverArtId,
 						title = collection.name ?: "[unknown album]",
-						sharedTransitionKey = sharedTransitionKey
+						sharedTransitionKey = sharedTransitionKey,
+						usage = collection
 					))
 				}
 			}

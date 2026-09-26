@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.coroutines.launch
 import navic.composeapp.generated.resources.Res
+import navic.composeapp.generated.resources.action_edit
 import navic.composeapp.generated.resources.action_more
 import navic.composeapp.generated.resources.action_save
 import navic.composeapp.generated.resources.action_share
@@ -25,6 +26,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import paige.navic.di.LocalSnackBarState
 import paige.navic.domain.manager.ShareManager
+import paige.navic.domain.models.DomainPlaylist
+import paige.navic.domain.models.DomainSongCollection
 import paige.navic.icons.Icons
 import paige.navic.icons.outlined.MoreVert
 import paige.navic.ui.components.layouts.NestedTopBar
@@ -37,7 +40,8 @@ import paige.navic.util.Logger
 fun ImageViewScreenTopBar(
 	bitmap: ImageBitmap? = null,
 	title: String,
-	onSetLoading: (Boolean) -> Unit
+	onSetLoading: (Boolean) -> Unit,
+	usage: DomainSongCollection?
 ) {
 	val snackBarState = LocalSnackBarState.current
 	val shareManager = koinInject<ShareManager>()

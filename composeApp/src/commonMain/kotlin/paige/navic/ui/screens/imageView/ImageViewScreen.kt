@@ -45,6 +45,7 @@ import org.koin.compose.koinInject
 import paige.navic.di.LocalNavStack
 import paige.navic.di.LocalSharedTransitionScope
 import paige.navic.domain.manager.SessionManager
+import paige.navic.domain.models.DomainSongCollection
 import paige.navic.ui.components.common.CoverArt
 import paige.navic.ui.screens.imageView.components.ImageViewScreenTopBar
 import paige.navic.ui.util.EmphasizedDecelerateEasing
@@ -58,7 +59,8 @@ import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext
 fun ImageViewScreen(
 	coverArtId: String,
 	title: String,
-	sharedTransitionKey: String
+	sharedTransitionKey: String,
+	usage: DomainSongCollection?
 ) {
 	val backStack = LocalNavStack.current
 
@@ -114,7 +116,8 @@ fun ImageViewScreen(
 			ImageViewScreenTopBar(
 				bitmap = bitmap,
 				title = title,
-				onSetLoading = { loading = it }
+				onSetLoading = { loading = it },
+				usage = usage
 			)
 		}
 	) { _ ->

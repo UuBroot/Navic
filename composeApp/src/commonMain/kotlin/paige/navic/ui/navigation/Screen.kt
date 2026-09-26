@@ -5,6 +5,7 @@ import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 import paige.navic.domain.models.DomainAlbumListType
 import paige.navic.domain.models.DomainArtistListType
+import paige.navic.domain.models.DomainSongCollection
 import paige.navic.domain.models.DomainSongListType
 
 @Immutable
@@ -80,8 +81,10 @@ sealed interface Screen : NavKey {
 	data class ImageView(
 		val coverArtId: String,
 		val title: String,
-		val sharedTransitionKey: String
-	) : Screen
+		val sharedTransitionKey: String,
+		val usage: DomainSongCollection?
+	) : Screen {
+	}
 
 	@Immutable
 	@Serializable
